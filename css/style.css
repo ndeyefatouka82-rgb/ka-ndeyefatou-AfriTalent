@@ -21,24 +21,76 @@
     grid-template-columns: repeat(3,1fr);
     gap: 20px;
 }
-.card{
-   width: 300px;
+/* les cartes */
+.cardss{
     padding: 25px;
     text-align: center;
     border-radius: 10px; 
     box-shadow:0 2px 10px  #eddad4;
-     background: #F8F5F3;
+    background: #F8F5F3;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+    width: 350px;
+    max-width: 350px;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 18rem;
+}
+.cardss > div{
+    width: 350px;
+}
+.cardsss{;
+    padding: 25px;
+    width : 300px;
+    height: 300px;
+    text-align: center;
+     
+    box-shadow:0 2px 10px  #eddad4;
+    background: #F8F5F3;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+    width: 300px;
+padding: 30px 20px;
+border-radius: 20px;
+
+    
+}
+
+.card{;
+    padding: 25px;
+    width : 300px;
+    height: 300px;
+    text-align: center;
+     
+    box-shadow:0 2px 10px  #eddad4;
+    background: #F8F5F3;
     /* padding: 20px; */
     border-radius: 12px;
-     border: 1px solid #e5e5e5;
+    border: 1px solid #e5e5e5;
+    width: 300px;
+padding: 30px 20px;
+border-radius: 20px;
+
+    
 }
 .cards{
    display: flex;
     justify-content: center; 
-    gap: 20px; 
     flex-wrap: wrap;
     margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
 }
+
+
 .card{
     transition: 0.3s;
 }
@@ -47,7 +99,146 @@
     transform: translateY(-10px);
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
-/
+.cardss{
+    transition: 0.3s;
+}
+
+.cardss:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.cardsss:nth-child(2){
+    margin-top: 80px;
+}
+
+.cardsss:nth-child(3){
+    margin-top: 160px;
+}
+.cardsss{
+    transition: 0.3s;
+}
+
+.cardsss:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+
+.accordion-button:not(.collapsed){
+    background-color: #d8a89a;
+    color: #000;
+    box-shadow: none;
+    border-color: #d8a89a;
+}
+
+.accordion-button:hover{
+    background-color: #d8a89a;
+    border: none;
+}
+
+
+
+
+
+
+#h1{
+    color: rgb(9, 8, 8);
+} */
+
+ .navbar1 {
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 40px; 
+} */ 
+
+ .nav-item {
+    gap: 40px; 
+    list-style: none;
+    margin-left: auto; 
+}
+.fr{
+  color: #d8a89a;font-weight: bold; 
+}
+/* les icons */
+.rating i{
+    color: gold;
+    font-size: 20px;
+}
+.card i{
+    color: #C58F8F;; /* rose doux */
+    font-size: 40px; /* agrandir */
+    margin-bottom: 15px;
+}
+.social-icons i{
+    font-size: 24px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.social-icons i:hover{
+    color: white;
+}
+.jesuisfreelance{
+    padding: 30px 40px; 
+    border-radius: 10px; 
+    border: none;
+    background-color: #eac7ba;
+    color: black;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+.div1{
+text-align: center;
+}
+
+
+.strong{
+    
+    color: #eac7ba;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+ .carousel{
+display: flex; 
+    justify-content: center;
+    gap: 20px; 
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+}
+/* /* footer */
+.footer{
+    background-color: #d8a89a;
+    padding: 60px 40px;
+}
+
+.footer h5{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-links{
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li{
+    margin-bottom: 10px;
+}
+
+.footer-links a{
+    text-decoration: none;
+    color: #222;
+}
+
+.footer-links a:hover{
+    color: white;
+}
+
+
+
 /* commit3 */
 body{
     padding-top: 120px;
@@ -90,11 +281,11 @@ h1{
 }
 
 button{
-    background-color: var(--primary-color);
+    background-color:#C58F8F;
     --white-color: #FFFFFF;
     border: none;
     padding: 10px 20px;
-    border-radius: 8px;
+    border-radius: 50px;
 }
 
 .navbar a:hover{
@@ -103,4 +294,150 @@ button{
 
 .nav-link.active{
     color: var(--primary-color);
+}
+/* contact */
+
+
+.contact-section{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+.contact-hero{
+   text-align: center;
+   margin: 0auto;
+}
+.contact-form input,
+.contact-form select{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+.contact-form input,
+.contact-form select{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+.contact-form{
+    width: 500px;
+}
+
+.contact-info{
+    width: 300px;
+    padding: 12px;
+     background-color: #C58F8F !important;
+    color: white;
+}
+.contact-hero{
+    text-align: center;
+    background: linear-gradient(135deg, #F8F5F3, #EDDAD4);
+    padding: 60px 20px;
+    margin: 0 auto;
+}
+
+.contact-hero h1{
+    color: #C88F8F;
+}
+/* bitton cta */
+.cta{
+    background: linear-gradient(135deg, #C88F8F, #EDDAD4);
+    text-align: center;
+    padding: 80px 20px;
+    color: white;
+    margin-top: 50px;
+}
+
+.btn-cta{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: white;
+    color: #C88F8F;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.cta{
+    background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 80px 20px;
+    color: white;
+}
+/* ===== TABLETTE ===== */
+@media screen and (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+
+/* ===== MOBILE ===== */
+@media screen and (max-width: 375px) {
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cardss {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards {
+        width: 95%;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    photo {
+        max-width: 100%;
+        height: auto;
+    }
 }

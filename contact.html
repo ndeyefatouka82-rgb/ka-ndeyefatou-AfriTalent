@@ -18,9 +18,9 @@ rel="stylesheet">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"></a>
     <img src="images/7bfb761e-d320-4ba1-a2f4-c0851b69835b.png" alt="Afritalent" height="70px" >
-    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button> -->
+    </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto gap-3">
         <li class="nav-item">
@@ -38,50 +38,49 @@ rel="stylesheet">
         <li class="nav-item">
           <a class="nav-link" href="contact.html" >CONTACT</a>
         </li>
-         <li><button >Rejoindre AfriTalent</button></li>
+         <li><button ><a href="contact.html">Rejoindre AfriTalent</a></button></li>
       </ul>
     </div>
   </div>
 </nav>
 
+<section class="contact-hero">
+    <h1>Contactez AfriTalent</h1>
+    <p>Nous sommes à votre écoute pour toute question ou collaboration.</p>
+</section>
 
-<label for="nom">Nom :</label>
-<input type="text" id="nom" name="nom">
-<label for="nom">Prenom :</label>
-<input type="text" id="nom" name="nom">
-<label for="mail">Mail :</label>
-<input type="email" id="mail" name="mail">
-<div class="mb-3">
+
+<div class="contact-section">
+        <div class="contact-form"  class="row">
+          <label for="nom">Nom :</label>
+          <input type="text" id="nom" name="nom">
+          <label for="nom">Prenom :</label>
+          <input type="text" id="prenom" name="prenom">
+          <label for="mail">Mail :</label>
+          <input type="email" id="mail" name="mail">
+          <div class="mb-3" >
           <label>Sujet</label>
           <select  id="sujet">
-            <option value="">Choisir...</option>
-            <option>Support</option>
-            <option>Information</option>
-            <option>Partenariat</option>
+              <option value="">Choisir...</option>
+              <option>Support</option>
+              <option>Information</option>
+              <option>Partenariat</option>
           </select>
           <small class="text-danger" id="errorSujet"></small>
         </div>
-
-
-
-
-
-
-
-
-
+</div>
 
 <!-- INFOS CONTACT -->
-    <!-- <div class="col-md-6"> -->
+      <div class="col-md-6" class="contact-info">
       <h4>Informations</h4>
       <p>Email : contact@afritalent.com</p>
       <p>Téléphone : +221 77 000 00 00</p>
       <p>Adresse : Dakar, Sénégal</p>
     </div>
 
-  </div>
+</div>
 
-  <!-- GOOGLE MAP -->
+  <!-- GOOGLE MAPS -->
   <div class="mt-5">
     <iframe 
       src="https://www.google.com/maps?q=Dakar&output=embed"

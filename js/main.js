@@ -46,3 +46,89 @@ topBtn.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
+// animation compteur
+const nombres = document.querySelectorAll("[data-target]");
+
+function animerCompteurs() {
+
+    nombres.forEach(nombre => {
+
+        let valeur = 0;
+        const cible = parseInt(nombre.dataset.target);
+        const increment = cible / 100;
+
+        function update() {
+
+            if (valeur < cible) {
+
+                valeur += increment;
+
+                if (cible === 95) {
+                    nombre.textContent = Math.ceil(valeur) + "%";
+                } else {
+                    nombre.textContent = Math.ceil(valeur);
+                }
+
+                setTimeout(update, 20);
+
+            } else {
+
+                if (cible === 95) {
+                    nombre.textContent = cible + "%";
+                } else {
+                    nombre.textContent = cible;
+                }
+
+            }
+
+        }
+
+        update();
+
+    });
+
+}
+
+const sectionCompteur = document.querySelector(".stats, .chiffres");
+
+if (sectionCompteur) {
+
+    const observerCompteur = new IntersectionObserver(entries => {
+
+        if (entries[0].isIntersecting) {
+
+            animerCompteurs();
+
+            observerCompteur.unobserve(sectionCompteur);
+
+        }
+
+    }, {
+        threshold: 0.5
+    });
+
+    observerCompteur.observe(sectionCompteur);
+
+}
+// Animation fade-in
+const sections = document.querySelectorAll(".fade-in");
+
+const sectionObserver = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+}, {
+    threshold: 0.2
+});
+
+sections.forEach(section => {
+    sectionObserver.observe(section);
+});

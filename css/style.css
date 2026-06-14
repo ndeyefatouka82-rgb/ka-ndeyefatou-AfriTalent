@@ -44,7 +44,7 @@
 .cardss > div{
     width: 350px;
 }
-.cardsss{;
+.cardsss{
     width : 300px;
     height: 300px;
     text-align: center;
@@ -53,12 +53,9 @@
     border-radius: 12px;
     border: 1px solid #e5e5e5;
 padding: 30px 20px;
-
-
-    
 }
 
-.card{;
+.card{
     /* padding: 25px; */
     width : 300px;
     height: 300px;
@@ -132,15 +129,13 @@ border-radius: 20px;
 
 
 
-#h1{
-    color: rgb(9, 8, 8);
-} */
+
 
  .navbar1 {
     justify-content: space-between; 
     align-items: center;
     padding: 0 40px; 
-} */ 
+} 
 
  .nav-item {
     gap: 40px; 
@@ -356,8 +351,7 @@ button{
     font-weight: bold;
 }
 .cta{
-    background:
-        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -523,4 +517,39 @@ body.bg .nav-link {
     position: fixed;
     bottom: 20px;
     right: 20px;
+}
+/* compteur */
+.counters{
+    text-align: center;
+     background: linear-gradient(135deg, #C88F8F, #EDDAD4);
+     padding: 3em 2em;
+
+}
+.counters > div{
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 4em 2em;
+}
+.counter{
+    position: relative;
+}
+.counter h3{
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+.cr{
+    text-align: center;
+}
+/* fade-in */
+.fade-in{
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.show{
+    opacity: 1;
+    transform: translateY(0);
 }

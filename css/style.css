@@ -131,6 +131,7 @@ border-radius: 20px;
 
 
 
+
  .navbar1 {
     justify-content: space-between; 
     align-items: center;
@@ -384,6 +385,17 @@ button{
     h1 {
         font-size: 2rem;
     }
+}
+@media screen and (min-width: 374px) {
+    /* Styles à appliquer pour les mobiles */
+}
+
+@media screen and (max-width: 767px) {
+    /* Styles à appliquer pour les tablettes */
+}
+
+@media screen and (min-width: 1200px) {
+    /* Styles à appliquer pour les ordinateurs de bureau */
 }
 
 

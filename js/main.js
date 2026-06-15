@@ -117,7 +117,7 @@ const sectionObserver = new IntersectionObserver(entries => {
 
     entries.forEach(entry => {
 
-        if(entry.isIntersecting){
+        if (entry.isIntersecting) {
 
             entry.target.classList.add("show");
 
@@ -132,3 +132,79 @@ const sectionObserver = new IntersectionObserver(entries => {
 sections.forEach(section => {
     sectionObserver.observe(section);
 });
+// filtrge par categorie
+const btnEnvoyer = document.getElementById("btnEnvoyer");
+
+if (btnEnvoyer) {
+
+    btnEnvoyer.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        let valide = true;
+
+        // Réinitialiser les messages
+        document.getElementById("errorNom").textContent = "";
+        document.getElementById("errorPrenom").textContent = "";
+        document.getElementById("errorMail").textContent = "";
+        document.getElementById("errorSujet").textContent = "";
+        document.getElementById("errorMessage").textContent = "";
+        document.getElementById("successMessage").textContent = "";
+
+        // Valeurs
+        const nom = document.getElementById("nom").value.trim();
+        const prenom = document.getElementById("prenom").value.trim();
+        const mail = document.getElementById("mail").value.trim();
+        const sujet = document.getElementById("sujet").value;
+        const message = document.getElementById("message").value.trim();
+
+        // Nom
+        if (nom === "") {
+            document.getElementById("errorNom").textContent =
+                "Le nom est obligatoire";
+            valide = false;
+        }
+
+        // Prénom
+        if (prenom === "") {
+            document.getElementById("errorPrenom").textContent =
+                "Le prénom est obligatoire";
+            valide = false;
+        }
+
+        // Email
+        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (mail === "") {
+            document.getElementById("errorMail").textContent =
+                "L'email est obligatoire";
+            valide = false;
+        } else if (!regexEmail.test(mail)) {
+            document.getElementById("errorMail").textContent =
+                "Format d'email invalide";
+            valide = false;
+        }
+
+        // Sujet
+        if (sujet === "") {
+            document.getElementById("errorSujet").textContent =
+                "Veuillez choisir un sujet";
+            valide = false;
+        }
+
+        // Message
+        if (message.length < 20) {
+            document.getElementById("errorMessage").textContent =
+                "Le message doit contenir au moins 20 caractères";
+            valide = false;
+        }
+
+        // Succès
+        if (valide) {
+            document.getElementById("successMessage").textContent =
+                "Votre message a été envoyé avec succès !";
+        }
+
+    });
+
+}

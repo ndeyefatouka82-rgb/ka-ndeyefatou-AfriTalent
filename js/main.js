@@ -78,15 +78,10 @@ function animerCompteurs() {
                 } else {
                     nombre.textContent = cible;
                 }
-
             }
-
         }
-
         update();
-
     });
-
 }
 
 const sectionCompteur = document.querySelector(".stats, .chiffres");
@@ -102,7 +97,6 @@ if (sectionCompteur) {
             observerCompteur.unobserve(sectionCompteur);
 
         }
-
     }, {
         threshold: 0.5
     });
@@ -122,9 +116,7 @@ const sectionObserver = new IntersectionObserver(entries => {
             entry.target.classList.add("show");
 
         }
-
     });
-
 }, {
     threshold: 0.2
 });
@@ -133,6 +125,33 @@ sections.forEach(section => {
     sectionObserver.observe(section);
 });
 // filtrge par categorie
+const categorySelect = document.getElementById("category-select");
+const cards = document.querySelectorAll(".cardss");
+
+if (categorySelect) {
+
+    categorySelect.addEventListener("change", () => {
+
+        const selectedCategory = categorySelect.value;
+
+        cards.forEach(card => {
+
+            if (
+                selectedCategory === "all" ||
+                card.dataset.category === selectedCategory
+            ) {
+
+                card.style.display = "flex";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+        });
+    });
+}
+// formulaire
 const btnEnvoyer = document.getElementById("btnEnvoyer");
 
 if (btnEnvoyer) {
@@ -204,7 +223,6 @@ if (btnEnvoyer) {
             document.getElementById("successMessage").textContent =
                 "Votre message a été envoyé avec succès !";
         }
-
     });
 
 }
